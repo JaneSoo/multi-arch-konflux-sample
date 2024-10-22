@@ -25,6 +25,12 @@ spec:
     value: quay.io/redhat-user-workloads/kchim-tenant/konflux-sample:{{revision}}
   - name: dockerfile
     value: Dockerfile
+  - name: build-platforms
+    value:
+      - localhost
+      - linux/arm64
+      - linux/ppc64le
+      - linux/s390x
   pipelineSpec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while maintaining trust after pipeline customization.
